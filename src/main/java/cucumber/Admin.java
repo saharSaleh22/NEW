@@ -1,7 +1,7 @@
 package cucumber;
 public class Admin {
-	private String name;
-	private String password;
+	 String name;
+	 String password;
 	public boolean loginAdmin;
 
 	
@@ -9,6 +9,7 @@ public class Admin {
 		super();
 		this.name = name;
 		this.password = password;
+		
 	}
 
 }

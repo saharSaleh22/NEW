@@ -12,9 +12,5 @@ public class LogoutFF{
 		public void islogout(){
 	    	JOptionPane.showMessageDialog(null, "you are log out");
 	    }
-
-		
-		
-	  
 	
 }

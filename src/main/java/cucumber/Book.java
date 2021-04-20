@@ -21,9 +21,6 @@ public class Book {
 	{
 		
 	}
-	
-	
-	
 	public Book(String author1,String title1,String isbn1 ,String sign)
 	{
 	auther =author1;
@@ -33,7 +30,7 @@ public class Book {
 	}
 	public void bookSearchTitle(List<Book>lib,String subtit )
 	{ 
-		String xe=q+subtit+w;
+		
 		logger.log(Level.INFO,"\n");
 		logger.log(Level.INFO,"when user searchs for one book by title:");
 		for(Book d:lib)
@@ -46,7 +43,7 @@ public class Book {
 	}
 	public void bookSearchmoreTitle(List<Book>lib,String subtit )
 	{ 
-		String xe=q+subtit+w;
+		
 		logger.log(Level.INFO,"\n");
 		logger.log(Level.INFO,"when user searchs for more than one book by title:");
 		for(Book d:lib)
@@ -62,7 +59,7 @@ public class Book {
 	}
 	public void bookSearchauthor(List<Book>lib,String author )
 	{
-		String xe=q+author+w;
+		
 		logger.log(Level.INFO,"when user searchs for one book by auther:");
 		for(Book d:lib)
 		{ String tit=d.auther;
@@ -76,7 +73,7 @@ public class Book {
 	}
 	public void bookSearchmoreauthor(List<Book>lib,String author )
 	{ 
-		String xe=q+author+w;
+	
 		logger.log(Level.INFO,"\n");
 		logger.log(Level.INFO,"when user searchs for more than one book by author:");
 		for(Book d:lib)
@@ -92,7 +89,7 @@ public class Book {
 	}
 	public void bookSearchISBN(List<Book>lib,String isbn )
 	{
-		String xe=q+isbn+w;
+
 		logger.log(Level.INFO,"\n");
 		logger.log(Level.INFO,"when user searchs for  one book by ISBN:");
 		for(Book d:lib)
@@ -108,7 +105,7 @@ public class Book {
 	
 	public void bookSearchmoreISBN(List<Book>lib,String isbn )
 	{ 
-		String xe=q+isbn+w;
+		
 		logger.log(Level.INFO,"\n");
 		logger.log(Level.INFO,"when user searchs for more than one book by ISBN:");
 		for(Book d:lib)
