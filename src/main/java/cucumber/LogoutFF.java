@@ -1,19 +1,20 @@
 package cucumber;
 
-	import javax.swing.ImageIcon;
-	import javax.swing.JFrame;
+
 	import javax.swing.JOptionPane;
 public class LogoutFF{
 
-	String Adminlog;
-	   String Adminlogpass;
+	String adminlog;
+	   String adminlogpass;
 	    public LogoutFF() {
-		// TODO Auto-generated constructor stub
+	    	//do nothing 
 	}
 		public void islogout(){
 	    	JOptionPane.showMessageDialog(null, "you are log out");
 	    }
-	    //System.exit(0);
+
+		
+		
 	  
 	
 }

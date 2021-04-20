@@ -1,131 +1,132 @@
 package cucumber;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Book {
+	private Logger logger=Logger.getLogger(Book.class.getName());
+	String auther;
+	String title;
+	String isbn;
+	String signiture;
+	String q="no book contain";
+	String w ="in this title";
+	String h;
+	Book c;
 	
-	String Author;
-	String Title;
-	String ISBN;
-	String Signiture;
-	Book c ;
 	ArrayList  <Book> lib=new ArrayList<Book>();
 	public Book()
 	{
 		
 	}
-	public Book(String author,String title,String isbn ,String sign)
+	
+	
+	
+	public Book(String author1,String title1,String isbn1 ,String sign)
 	{
-	Author =author;
-	Title =title;
-	ISBN=isbn;
-	Signiture =sign;
+	auther =author1;
+	title =title1;
+	isbn=isbn1;
+	signiture =sign;
 	}
-	public void bookSearchTitle(ArrayList<Book>lib,String subtit )
+	public void bookSearchTitle(List<Book>lib,String subtit )
 	{ 
-		System.out.println();
-		System.out.println("when user searchs for one book by title:");
+		String xe=q+subtit+w;
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"when user searchs for one book by title:");
 		for(Book d:lib)
-		{ String tit=d.Title;
+		{ String tit=d.title; 
 		  int f=tit.indexOf(subtit);
 			if(f!=-1)
 				c=d;
 		}
-		if(c!=null)
-		System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
-		else
-			System.out.print("no book contain"+subtit+"in this title");
+		
 	}
-	public void bookSearchmoreTitle(ArrayList<Book>lib,String subtit )
+	public void bookSearchmoreTitle(List<Book>lib,String subtit )
 	{ 
-		System.out.println();
-		System.out.println("when user searchs for more than one book by title:");
+		String xe=q+subtit+w;
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"when user searchs for more than one book by title:");
 		for(Book d:lib)
-		{ String tit=d.Title;
+		{ String tit=d.title;
 		  int f=tit.indexOf(subtit);
 			if(f!=-1)
 			{
 				c=d;
-				System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
+				logger.log(Level.INFO,h);
 			}
 		}
-		if(c==null)
-			System.out.print("no book contain"+subtit+"in this title");
+	
 	}
-	public void bookSearchauthor(ArrayList<Book>lib,String author )
-	{ System.out.println("when user searchs for one book by auther:");
+	public void bookSearchauthor(List<Book>lib,String author )
+	{
+		String xe=q+author+w;
+		logger.log(Level.INFO,"when user searchs for one book by auther:");
 		for(Book d:lib)
-		{ String tit=d.Author;
+		{ String tit=d.auther;
 		  int f=tit.indexOf(author);
 			if(f!=-1)
 				c=d;
 		}
 		if(c!=null)
-		System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
-		else
-			System.out.print("no book contain"+author+"in this title");
+			logger.log(Level.INFO,h);
+		
 	}
-	public void bookSearchmoreauthor(ArrayList<Book>lib,String author )
+	public void bookSearchmoreauthor(List<Book>lib,String author )
 	{ 
-		System.out.println();
-		System.out.println("when user searchs for more than one book by author:");
+		String xe=q+author+w;
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"when user searchs for more than one book by author:");
 		for(Book d:lib)
-		{ String tit=d.Author;
+		{ String tit=d.auther;
 		  int f=tit.indexOf(author);
 			if(f!=-1)
 				{c=d;
 			
-				System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
+				logger.log(Level.INFO,h);
 				}
 		}
-		if(c==null)
 		
-			System.out.print("no book contain"+author+"in this title");
 	}
-	public void bookSearchISBN(ArrayList<Book>lib,String isbn )
-	{ 
-		System.out.println();
-		System.out.println("when user searchs for  one book by ISBN:");
+	public void bookSearchISBN(List<Book>lib,String isbn )
+	{
+		String xe=q+isbn+w;
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"when user searchs for  one book by ISBN:");
 		for(Book d:lib)
-		{ String tit=d.ISBN;
+		{ String tit=d.isbn;
 		  int f=tit.indexOf(isbn);
 			if(f!=-1)
 				c=d;
 		}
 		if(c!=null)
-		System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
-		else
-			System.out.print("no book contain"+isbn+"in this title");
+			logger.log(Level.INFO,h);
+		
 	}
 	
-	public void bookSearchmoreISBN(ArrayList<Book>lib,String isbn )
+	public void bookSearchmoreISBN(List<Book>lib,String isbn )
 	{ 
-		System.out.println();
-		System.out.println("when user searchs for more than one book by ISBN:");
+		String xe=q+isbn+w;
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"when user searchs for more than one book by ISBN:");
 		for(Book d:lib)
-		{ String tit=d.ISBN;
+		{ String tit=d.isbn;
 		  int f=tit.indexOf(isbn);
 			if(f!=-1)
 			{
 				c=d;
-				System.out.print(c.Title+" "+c.ISBN+" "+c.Author+" "+c.Signiture+"\n");
+				logger.log(Level.INFO,h);
 			}
 		}
-		if(c==null)
-			System.out.print("no book contain"+isbn+"in this title");
+		
 	}
+
 	
-	
-	//Book  b1 =new Book("dav bikker","dog man","1338680455","2002");
-	//Book  b2 =new Book("caste","isable","0593230256","2003");
-	//Book  b3 =new Book("promised man","barak","1338680455","2004");
-	
-	public void addBook(ArrayList<Book>lib,Book b)
+	public void addBook(List<Book>lib,Book b)
 	{
-		//lib.add(b1);
-		//lib.add(b2);
-		//lib.add(b3);
-		if(b.cheackISBN(b.ISBN)&&b.checkSign(lib, b))
+		if(b.cheackISBN(b.isbn)&&b.checkSign(lib, b))
 			lib.add(b);
 		
 	}
@@ -152,23 +153,25 @@ public class Book {
 		}
 		
 	}
-	public boolean checkSign(ArrayList<Book>b ,Book a)
+	public boolean checkSign(List<Book> lib2 ,Book a)
 	{
-		for(Book c:b)
+		for(Book c1:lib2)
 		{
-		if(c.Signiture.equalsIgnoreCase(a.Signiture))
+		if(c1.signiture.equalsIgnoreCase(a.signiture))
 			return false;
 		}
 		return true;
 	}
-	public void printBook(ArrayList<Book>b )
+	public void printBook(List<Book>b )
 	{
-		System.out.println();
-		System.out.println("the list of bookksin my library: ");
-		for(Book c:b)
+		logger.log(Level.INFO,"\n");
+		logger.log(Level.INFO,"the list of bookksin my library: ");
+		for(Book c2:b)
 		{
-		System.out.print(c.Title +" "+c.ISBN+" "+c.Signiture+" "+c.Author+"\n");
+			String k=c2.title +" "+c2.isbn+" "+c2.signiture+" "+c2.auther+"\n";
+			logger.log(Level.INFO,k);
 		}
+		
 		
 	}
 }

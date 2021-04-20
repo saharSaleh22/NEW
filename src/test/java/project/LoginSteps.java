@@ -14,6 +14,8 @@ public class LoginSteps {
 	   System.out.println("Step1: the user in login page now ");
 	}
 
+	
+	
 	@When("user  enters valid credentials and he entered {string} and {string}")
 	public void user_enters_valid_credentials_and_he_entered_and(String name, String password) {
 		 System.out.println("the user enterd his credentials \nUsername: "+name+", Password: "+ password);

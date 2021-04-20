@@ -14,12 +14,12 @@ public class LogoutSteps {
 
 	LogoutFF f=new LogoutFF();
 	Admin ad=new Admin("sahar","11821693");
-	//Boolean log= false;
 	@Given("I am logged in")
 	public void i_am_logged_in() {
 		ad.loginAdmin=true;
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
+
+		
+		
 	}
 
 	@Given("browser is open and the user in log out page")
@@ -27,15 +27,11 @@ public class LogoutSteps {
 	    // Write code here that turns the phrase above into concrete actions
 		if(ad.loginAdmin)
 		System.out.print("you are in log out page");
-	   // throw new io.cucumber.java.PendingException();
+	 
 	}
 
 	@When("admin is choose logout")
 	public void admin_is_choose_logout() {
-		 if(ad.loginAdmin==false)
-			 System.out.print("you are not logged in to log out");
-		 // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("the Admin should be loged out")
@@ -45,8 +41,6 @@ public class LogoutSteps {
 		ad.loginAdmin=false;
 		}
 		assertTrue(ad.loginAdmin==false);
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("return to login page")

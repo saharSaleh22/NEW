@@ -5,6 +5,8 @@ Feature: feature to test login functionality
     When user  enters valid credentials and he entered "rand" and "11821655"
     Then the student should be loged in
 
+
+
   Scenario: Admin enter a invalid password
     Given admin on login page
     When Admin enters "sahar" and wrong "11821693"
